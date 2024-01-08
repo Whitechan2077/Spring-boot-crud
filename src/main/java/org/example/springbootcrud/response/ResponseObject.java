@@ -9,5 +9,4 @@ public class ResponseObject {
     private String status;
     private String messages;
     private Object data;
-
 }

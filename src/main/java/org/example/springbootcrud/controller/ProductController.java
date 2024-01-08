@@ -2,6 +2,7 @@ package org.example.springbootcrud.controller;
 
 import org.example.springbootcrud.dtos.ProductDTO;
 import org.example.springbootcrud.response.ResponseObject;
+import org.example.springbootcrud.services.IProductService;
 import org.example.springbootcrud.services.impl.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,7 +14,7 @@ import java.util.NoSuchElementException;
 @RequestMapping(path = "api/v1/product")
 public class ProductController {
     @Autowired
-    ProductService service;
+    IProductService service;
     @GetMapping("/getAllProduct")
     public ResponseEntity<ResponseObject> getAllProduct(){
         return ResponseEntity.status(HttpStatus.OK)
